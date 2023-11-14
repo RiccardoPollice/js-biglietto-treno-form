@@ -11,14 +11,14 @@
 
   <body>
     <main>
-        <form>
 
-           <div class="container">
+         <div class="container bg-danger">
+            <form onsubmit="UserHasFinishDataCompletion(event)">
+                <h1 class="text-center text-white">CALCOLA IL PREZZO DEL BIGLIETTO</h1>
               <div class="row">
-
                 <div class="col-4 mb-3">
                     <label for="name" class="form-label d-flex justify-content-center">Nome e Cognome</label>
-                    <input type="Name" class="form-control" id="Name">
+                    <input type="Name" class="form-control" id="name">
                 </div>
 
                 
@@ -29,31 +29,27 @@
                 
                 <div class="col-4 mb-3">
                     <label for="fascia_età" class="form-label d-flex justify-content-center">Fascia di Età</label>
-                    <select class="form-select">
+                    <select id="age_select" class="form-select">
                         <option selected>Seleziona l'età</option>
                         <option value="Minorenne">Minorenne</option>
                         <option value="Maggiorenne">Maggiorenne</option>
                         <option value="Over65">Over65</option>
                     </select>    
                 </div>
-              <div class="row d-flex justify-content-center"></div>  
+                <div class="row d-flex justify-content-center">
+                    <div class="col-4 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-light text-danger">Genera</button>
+                    </div>
+                </div>  
 
-               
-              </div>
-           </div>
+            </form>
+      </div>
 
-
-
-
-
-
-
-
-
-
-
-        </form>
-
+        <div class="row">
+            <div class="col-12">
+                <p>Il tuo costo è <span id="user_price"></span></p>
+            </div>
+        </div>
 
     </main>
 
