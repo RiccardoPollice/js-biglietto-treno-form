@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,49 +10,50 @@
   </head>
 
   <body>
-    <main>
+        <main>
 
-         <div class="container bg-danger">
-            <form onsubmit="UserHasFinishDataCompletion(event)">
-                <h1 class="text-center text-white">CALCOLA IL PREZZO DEL BIGLIETTO</h1>
-              <div class="row">
-                <div class="col-4 mb-3">
-                    <label for="name" class="form-label d-flex justify-content-center">Nome e Cognome</label>
-                    <input type="Name" class="form-control" id="name">
-                </div>
+             <div class="container-fluid bg-danger">
+                    <form onsubmit="dataUser(event)">
+                            <h1 class="text-center text-white">CALCOLA IL PREZZO DEL BIGLIETTO</h1>
+                     <div class="row"> 
+                            <div class="col-4 mb-3">
+                                <label for="name" class="form-label d-flex justify-content-center">Nome e Cognome</label>
+                                <input type="name" class="form-control" id="name">
+                            </div>
 
-                
-                <div class="col-4 mb-3">
-                    <label for="Km_da_Percorrere" class="form-label d-flex justify-content-center">Km da Percorrere</label>
-                    <input type="Km_da_Percorrere" class="form-control" id="Km_da_Percorrere">
-                </div>
-                
-                <div class="col-4 mb-3">
-                    <label for="fascia_età" class="form-label d-flex justify-content-center">Fascia di Età</label>
-                    <select id="age_select" class="form-select">
-                        <option selected>Seleziona l'età</option>
-                        <option value="Minorenne">Minorenne</option>
-                        <option value="Maggiorenne">Maggiorenne</option>
-                        <option value="Over65">Over65</option>
-                    </select>    
-                </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-4 d-flex justify-content-center">
-                        <button type="submit" class="btn btn-light text-danger">Genera</button>
-                    </div>
-                </div>  
+                            
+                            <div class="col-4 mb-3">
+                                <label for="Km_da_Percorrere" class="form-label d-flex justify-content-center">Km da Percorrere</label>
+                                <input type="Km_da_Percorrere" class="form-control" id="Km_da_Percorrere">
+                            </div>
+                            
+                            <div class="col-4 mb-3">
+                                <label for="fascia_età" class="form-label d-flex justify-content-center">Fascia di Età</label>
+                                <select id="age_select" class="form-select">
+                                    <option selected>Seleziona l'età</option>
+                                    <option value="Minorenne">Minorenne</option>
+                                    <option value="Maggiorenne">Maggiorenne</option>
+                                    <option value="Over65">Over65</option>
+                                </select>    
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-4 d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-light text-danger">Genera</button>
+                                </div>
+                            </div> 
+                     </div>   
 
-            </form>
-      </div>
-
-        <div class="row">
-            <div class="col-12">
-                <p>Il tuo costo è <span id="user_price"></span></p>
+                    </form>
             </div>
-        </div>
 
-    </main>
+                <div class="row mt-5">
+                    <div class="col-12 text-center">
+                        <p>Il tuo costo è <span id="user_price"></span></p>
+                    </div>
+                </div>
+        </main>
 
-   
-  </body>
+
+        <script src="./js/main.js"></script>
+    </body>
 </html>
